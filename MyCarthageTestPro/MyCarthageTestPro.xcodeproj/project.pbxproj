@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,7 +15,35 @@
 		0ADE423B23648B7F0064D11B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ADE423923648B7F0064D11B /* LaunchScreen.storyboard */; };
 		0ADE423E23648B7F0064D11B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADE423D23648B7F0064D11B /* main.m */; };
 		0ADE424723648BFA0064D11B /* MyCarthage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADE424623648BFA0064D11B /* MyCarthage.m */; };
+		0ADE425423648D820064D11B /* MyCarthage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADE424D23648D820064D11B /* MyCarthage.framework */; };
+		0ADE425523648D820064D11B /* MyCarthage.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0ADE424D23648D820064D11B /* MyCarthage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0ADE425A23648DDB0064D11B /* MyCarthage.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ADE424523648BFA0064D11B /* MyCarthage.h */; platformFilter = ios; settings = {ATTRIBUTES = (Public, ); }; };
+		0ADE425B23648DE60064D11B /* MyCarthage.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ADE424623648BFA0064D11B /* MyCarthage.m */; platformFilter = ios; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0ADE425223648D820064D11B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0ADE422023648B7E0064D11B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0ADE424C23648D820064D11B;
+			remoteInfo = MyCathageFramework;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0ADE425923648D820064D11B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0ADE425523648D820064D11B /* MyCarthage.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0ADE422823648B7E0064D11B /* MyCarthageTestPro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCarthageTestPro.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -32,10 +60,20 @@
 		0ADE423D23648B7F0064D11B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0ADE424523648BFA0064D11B /* MyCarthage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCarthage.h; sourceTree = "<group>"; };
 		0ADE424623648BFA0064D11B /* MyCarthage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCarthage.m; sourceTree = "<group>"; };
+		0ADE424D23648D820064D11B /* MyCarthage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyCarthage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ADE425023648D820064D11B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0ADE422523648B7E0064D11B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ADE425423648D820064D11B /* MyCarthage.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0ADE424A23648D820064D11B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				0ADE422A23648B7E0064D11B /* MyCarthageTestPro */,
+				0ADE424E23648D820064D11B /* MyCathageFramework */,
 				0ADE422923648B7E0064D11B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				0ADE422823648B7E0064D11B /* MyCarthageTestPro.app */,
+				0ADE424D23648D820064D11B /* MyCarthage.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,7 +129,26 @@
 			path = MyCarthageSDK;
 			sourceTree = "<group>";
 		};
+		0ADE424E23648D820064D11B /* MyCathageFramework */ = {
+			isa = PBXGroup;
+			children = (
+				0ADE425023648D820064D11B /* Info.plist */,
+			);
+			path = MyCathageFramework;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0ADE424823648D820064D11B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ADE425A23648DDB0064D11B /* MyCarthage.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		0ADE422723648B7E0064D11B /* MyCarthageTestPro */ = {
@@ -99,15 +158,35 @@
 				0ADE422423648B7E0064D11B /* Sources */,
 				0ADE422523648B7E0064D11B /* Frameworks */,
 				0ADE422623648B7E0064D11B /* Resources */,
+				0ADE425923648D820064D11B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0ADE425323648D820064D11B /* PBXTargetDependency */,
 			);
 			name = MyCarthageTestPro;
 			productName = MyCarthageTestPro;
 			productReference = 0ADE422823648B7E0064D11B /* MyCarthageTestPro.app */;
 			productType = "com.apple.product-type.application";
+		};
+		0ADE424C23648D820064D11B /* MyCathageFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0ADE425623648D820064D11B /* Build configuration list for PBXNativeTarget "MyCathageFramework" */;
+			buildPhases = (
+				0ADE424823648D820064D11B /* Headers */,
+				0ADE424923648D820064D11B /* Sources */,
+				0ADE424A23648D820064D11B /* Frameworks */,
+				0ADE424B23648D820064D11B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyCathageFramework;
+			productName = MyCathageFramework;
+			productReference = 0ADE424D23648D820064D11B /* MyCarthage.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -119,6 +198,9 @@
 				ORGANIZATIONNAME = didi;
 				TargetAttributes = {
 					0ADE422723648B7E0064D11B = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					0ADE424C23648D820064D11B = {
 						CreatedOnToolsVersion = 11.0;
 					};
 				};
@@ -137,6 +219,7 @@
 			projectRoot = "";
 			targets = (
 				0ADE422723648B7E0064D11B /* MyCarthageTestPro */,
+				0ADE424C23648D820064D11B /* MyCathageFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -149,6 +232,13 @@
 				0ADE423B23648B7F0064D11B /* LaunchScreen.storyboard in Resources */,
 				0ADE423823648B7F0064D11B /* Assets.xcassets in Resources */,
 				0ADE423623648B7E0064D11B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0ADE424B23648D820064D11B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +257,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0ADE424923648D820064D11B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ADE425B23648DE60064D11B /* MyCarthage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0ADE425323648D820064D11B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0ADE424C23648D820064D11B /* MyCathageFramework */;
+			targetProxy = 0ADE425223648D820064D11B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0ADE423423648B7E0064D11B /* Main.storyboard */ = {
@@ -333,6 +439,60 @@
 			};
 			name = Release;
 		};
+		0ADE425723648D820064D11B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2M632FEG3H;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MyCathageFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "javer-yi.MyCathageFramework";
+				PRODUCT_NAME = MyCarthage;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0ADE425823648D820064D11B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 2M632FEG3H;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = MyCathageFramework/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "javer-yi.MyCathageFramework";
+				PRODUCT_NAME = MyCarthage;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -350,6 +510,15 @@
 			buildConfigurations = (
 				0ADE424223648B7F0064D11B /* Debug */,
 				0ADE424323648B7F0064D11B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0ADE425623648D820064D11B /* Build configuration list for PBXNativeTarget "MyCathageFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0ADE425723648D820064D11B /* Debug */,
+				0ADE425823648D820064D11B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
